@@ -1,10 +1,8 @@
 /*
 
-7. Write a java program that accepts vertex pairs
-associated to the edges of an undirected graph and
-the number of times each edge appears. The program
-should construct an incidence matrix for the graph.
+8. Write a Java program that checks whether two graphs are isomorphic or not, given a set of vertices.
 */
+
 
 import java.util.Scanner;
 
