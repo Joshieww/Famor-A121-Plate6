@@ -6,7 +6,6 @@ associated to the edges of an undirected graph and
 the number of times each edge appears. The program
 should construct an incidence matrix for the graph.
 */
-
 import java.util.Scanner;
 
 public class Problem7 {
@@ -24,7 +23,12 @@ public class Problem7 {
         for (int i = 0; i < m; i++) {
             int u = scanner.nextInt(), v = scanner.nextInt(), count = scanner.nextInt();
             for (int j = 0; j < count; j++) {
-                incMat[u][i + j] = incMat[v][i + j] = 1;
+                if (i + j < m) {
+                    incMat[u][i + j] = incMat[v][i + j] = 1;
+                } else {
+                    System.out.println("Edge index out of bounds.");
+                    break;
+                }
             }
             i += count - 1;
         }
